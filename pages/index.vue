@@ -1,53 +1,74 @@
 <template>
-    <div class="container">
-        <i-container>
-            <i-row>
-                <h1 class="title">App</h1>
-            </i-row>
-        </i-container>
+    <div class="container-center-horizontal">
+        <Header />
     </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
+import Header from '../components/Header.vue'
 export default {
-    components: {
-        Logo,
-    },
+    components: { Header },
 }
 </script>
 
 <style>
-.container {
-    margin: 0 auto;
-    min-height: 100vh;
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,300,700|Roboto:400|Manrope:500');
+.component-wrapper * {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+    pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+    visibility: hidden !important;
+}
+
+.screen a {
+    display: contents;
+    text-decoration: none;
+}
+
+.container-center-horizontal {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    pointer-events: none;
+    width: 100%;
 }
 
-.title {
-    font-family: 'Quicksand', 'Source Sans Pro', -apple-system,
-        BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-        sans-serif;
-    display: block;
-    font-weight: 300;
-    font-size: 100px;
-    color: #35495e;
-    letter-spacing: 1px;
+.container-center-horizontal > * {
+    flex-shrink: 0;
+    pointer-events: auto;
 }
 
-.subtitle {
-    font-weight: 300;
-    font-size: 42px;
-    color: #526488;
-    word-spacing: 5px;
-    padding-bottom: 15px;
+.valign-text-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.links {
-    padding-top: 15px;
+.valign-text-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.listeners-active,
+.listeners-active * {
+    pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+    pointer-events: none;
+    visibility: hidden;
 }
 </style>
