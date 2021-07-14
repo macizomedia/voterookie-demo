@@ -1,22 +1,19 @@
 <template>
-    <div>
-        <div class="container-center-horizontal">
-            <Button variant="1" title="LOGIN" />
-            <Button :variant="2" title="START AS A CITIZEN" />
-            <Form v-if="init" />
-        </div>
+    <div class="container-center-horizontal">
+        <get-started-one class="component-wrapper" />
     </div>
 </template>
 
 <script>
-import Button from '../components/Button.vue'
-import Form from '../components/Form.vue'
-import Header from '../components/Header.vue'
+import Card from '../components/Card.vue'
+import GetStartedOne from '../components/GetStartedOne.vue'
 export default {
-    components: { Header, Form, Button },
+    components: { Card, GetStartedOne },
     data() {
         return {
-            init: false,
+            title: 'arepa',
+            tag: 'mondong',
+            content: 'chicharon',
         }
     },
 }

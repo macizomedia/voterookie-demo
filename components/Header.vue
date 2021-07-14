@@ -1,5 +1,5 @@
 <template>
-    <div class="onboarding screen">
+    <div>
         <div class="overlap-group">
             <img class="rectangle-3" src="../assets/img/rectangle-3@2x.png" />
             <img class="cover" src="../assets/img/image-1-1@2x.png" />
@@ -9,6 +9,9 @@
                     src="../assets/img/voterookie-logo-weiss-pinke-karte-weisse-umrandung-2@2x.png"
                 />
             </div>
+            <nuxt-link to="/mobile">
+                mobile
+            </nuxt-link>
         </div>
         <div class="flex-row">
             <div class="rectangle-4"></div>
@@ -17,52 +20,37 @@
             </h1>
         </div>
         <p class="text-1">Your tool for civic participation</p>
-        <Button :variant="1">LOGIN</Button>
+
+        <!-- <Button :variant="1">LOGIN</Button>
         <Button :variant="2">START AS A CITIZEN</Button>
 
-        <div class="text-4">Sign up your organisation</div>
-        <p class="text-5">
-            Our data privacy and imprint
-        </p>
+         -->
     </div>
 </template>
 
 <script>
+/* }-<((('> */
 import Button from '../components/Button.vue'
 export default {
     components: {
-        Button
-    }
+        Button,
+    },
 }
 </script>
 
 <style>
-
-
-.onboarding {
-    align-items: center;
-    background-color: var(--background);
-    display: flex;
-    flex-direction: column;
-    height: 812px;
-    overflow: hidden;
-    width: 375px;
-}
-
-.onboarding .overlap-group {
+.overlap-group {
     height: 420px;
     margin-left: 0.5px;
-    position: relative;
-    width: 376px;
 }
-.onboarding .cover {
+.cover {
     height: 309px;
     left: 0;
     position: absolute;
     top: 111px;
     width: 375px;
 }
-.onboarding .rectangle-3 {
+.rectangle-3 {
     height: 233px;
     left: 0;
     position: absolute;
@@ -70,7 +58,7 @@ export default {
     width: 375px;
 }
 
-.onboarding .navigation-bar {
+.navigation-bar {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -81,13 +69,13 @@ export default {
     width: 375px;
 }
 
-.onboarding .voterookie-logo {
+.voterookie-logo {
     padding-top: 2rem;
     height: 61px;
     object-fit: cover;
     width: 121px;
 }
-.onboarding .flex-row {
+.flex-row {
     align-items: center;
     display: flex;
     height: 64px;
@@ -95,12 +83,12 @@ export default {
     min-width: 299px;
 }
 
-.onboarding .rectangle-4 {
+.rectangle-4 {
     background-color: var(--rookie-pink);
     height: 62px;
     width: 5px;
 }
-.onboarding .text-2 {
+.text-2 {
     padding-bottom: 2rem;
     letter-spacing: 0.6px;
     line-height: 31px;
@@ -124,7 +112,7 @@ export default {
     color: #2047ff;
 }
 
-.onboarding .text-1 {
+.text-1 {
     margin-right: 31px;
     margin-top: 10px;
     min-height: 19px;
